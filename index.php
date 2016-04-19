@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Stav automatu</h1>
-<p id="cas">p·tek 15.4.2016 11:56:25</p>
+<p id="cas">p√°tek 15.4.2016 11:56:25</p>
 <?
  function map($value, $fromLow, $fromHigh, $toLow, $toHigh) { // konverze rozsahu na jiny rozsah
     $fromRange = $fromHigh - $fromLow;
@@ -134,5 +134,6 @@ window.setInterval("nactiCas()", 1000); //pravidelna zmena, sekunda
 </script>
 
  <p>&copy; <a href="https://www.pihrt.com">Pihrt.com</a> AUTOMAT OSPy. </p> 
+ <p>Pro plugin <a href="https://pihrt.com/elektronika/248-moje-rapsberry-pi-zavlazovani-zahrady">Remote Notifications</a> automatu <a href="https://github.com/martinpihrt/OSPy">OpenSprinkler</a> OSPy. </p> 
  </body>
  </html>
