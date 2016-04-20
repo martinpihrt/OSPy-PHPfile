@@ -98,12 +98,14 @@ if ($line!=""){
   }
 
 if ($lastrun){
- echo ("<h2>Naposledy b&#283;&#382;ela</h2>");
+ echo ("<h2>Naposledy b&#283;&#382;ela stanice</h2>");
  if ($lastrun!=0){
     echo ("<p><b>Stanice:</b> $station<br>");
-    echo ("<b>po dobu:</b> $duration<br>");
+    echo ("<b>po dobu:</b> $duration [min:sec]<br>"); 
     echo ("<b>dne:</b> $lastrun<br>");
-    echo ("<b>vlhkost:</b> $humi %RV</p>");
+    if ($humi!=""){
+      echo ("<b>vlhkost:</b> $humi [%RV]</p>");
+      }
     }
   }
 
