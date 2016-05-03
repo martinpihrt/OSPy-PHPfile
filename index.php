@@ -135,7 +135,10 @@ nactiCas(); //naplneni na zacatku
 window.setInterval("nactiCas()", 1000); //pravidelna zmena, sekunda
 </script>
 
- <p>&copy; <a href="https://www.pihrt.com">Pihrt.com</a> AUTOMAT OSPy. </p> 
- <p>Pro plugin <a href="https://pihrt.com/elektronika/248-moje-rapsberry-pi-zavlazovani-zahrady">Remote Notifications</a> automatu <a href="https://github.com/martinpihrt/OSPy">OpenSprinkler</a> OSPy. </p> 
- </body>
- </html>
+<h2>Foto</h2>
+<p><a href="camfoto/foto.jpg" target="_blank"><img src="camfoto/foto.jpg" alt="snapshot" width="320" height="240"></a></p>
+ 
+<p>&copy; <a href="https://www.pihrt.com">Pihrt.com</a> AUTOMAT OSPy. </p> 
+<p>Pro plugin <a href="https://pihrt.com/elektronika/248-moje-rapsberry-pi-zavlazovani-zahrady">Remote Notifications</a> automatu <a href="https://github.com/martinpihrt/OSPy">OpenSprinkler</a> OSPy. </p> 
+</body>
+</html>
