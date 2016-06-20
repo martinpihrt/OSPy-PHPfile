@@ -6,14 +6,16 @@
 		$pass="zadejte";    // heslo db
 		$db="ospy";         // nazev databaze db
               
-		$connection = mysql_connect($server, $user, $pass);
+		$link = mysqli_connect($server, $user, $pass, $db);
 
-		if (!$connection) {
-	    	die('MySQL ERROR: ' . mysql_error());
-		}
-		
-		mysql_select_db($db) or die( 'MySQL ERROR: '. mysql_error() );
+		if (!$link) {
+                 echo "Error: Unable to connect to MySQL." . PHP_EOL;
+                 echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+                 echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+                 exit;
+                 }
 
-		return $connection;
+              return $link;
 	}
+
 ?>
