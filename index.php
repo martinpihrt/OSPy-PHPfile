@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Stav automatu</h1>
-<p id="cas">pátek 15.4.2016 11:56:25</p>
+<p id="cas"></p>
 <?
  function map($value, $fromLow, $fromHigh, $toLow, $toHigh) { // konverze rozsahu na jiny rozsah
     $fromRange = $fromHigh - $fromLow;
@@ -24,9 +24,9 @@
  include("connect.php"); 	
  $link=Connection();
 
- $query = mysql_query("SELECT * FROM ospy WHERE time = (SELECT MAX( time ) FROM ospy) ",$link); 
+ $query = mysqli_query($link, "SELECT * FROM ospy WHERE time = (SELECT MAX( time ) FROM ospy) "); 
 
- if($row = mysql_fetch_array($query)){ 
+ if($row = mysqli_fetch_array($query)){ 
     $time= $row["time"];
     $tank=$row['tank'];
     $rain=$row['rain'];
@@ -111,7 +111,7 @@ if ($lastrun){
 
  echo ("<h2>Z&aacute;znamy</h2>");
  echo ("<a href=\"log.php\"><img border=\"0\" alt=\"obrazek pro vstup do logu\" src=\"log.png\" width=\"200\" height=\"200\"></a>");
-
+ mysqli_close($link);
 ?>
 
 <script type="text/javascript">
@@ -138,7 +138,7 @@ window.setInterval("nactiCas()", 1000); //pravidelna zmena, sekunda
 <h2>Foto</h2>
 <p><a href="camfoto/foto.jpg" target="_blank"><img src="camfoto/foto.jpg" alt="snapshot" width="320" height="240"></a></p>
  
-<p>&copy; <a href="https://www.pihrt.com">Pihrt.com</a> AUTOMAT OSPy. </p> 
+<p>&copy; <a href="https://pihrt.com">Pihrt.com</a> AUTOMAT OSPy. </p> 
 <p>Pro plugin <a href="https://pihrt.com/elektronika/248-moje-rapsberry-pi-zavlazovani-zahrady">Remote Notifications</a> automatu <a href="https://github.com/martinpihrt/OSPy">OpenSprinkler</a> OSPy. </p> 
 </body>
 </html>
