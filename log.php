@@ -27,13 +27,14 @@
 			<td><b>&nbsp;Trv&aacute;n&iacute;&nbsp;</b></td>
                      <td><b>&nbsp;Stav napajen&iacute;&nbsp;</b></td>
                      <td><b>&nbsp;&#268;idlo de&#353;t&#283;&nbsp;</b></td>
+                     <td><b>&nbsp;Teploty&nbsp;[DS1-DS6]</b></td>
 		</tr>
 
       <?php     
                 if($result!==FALSE){
 		     while($row = mysqli_fetch_array($result)) {
-		        printf("<tr><td> &nbsp;%s </td><td> &nbsp;%s </td><td> &nbsp;%s </td><td> &nbsp;%s&nbsp; </td><td> &nbsp;%s&nbsp; </td><td> &nbsp;%s&nbsp; </td><td> &nbsp;%s&nbsp; </td><td> &nbsp;%s&nbsp; </td></tr>", 
-		           $row["time"], $row["tank"], $row["humi"], $row["station"], $row["lastrun"], $row["duration"], $row["line"], $row["rain"]);
+		        printf("<tr><td> &nbsp;%s </td><td> &nbsp;%s </td><td> &nbsp;%s </td><td> &nbsp;%s&nbsp; </td><td> &nbsp;%s&nbsp; </td><td> &nbsp;%s&nbsp; </td><td> &nbsp;%s&nbsp; </td><td> &nbsp;%s&nbsp; </td><td> &nbsp;%s&nbsp; </td></tr>", 
+		           $row["time"], $row["tank"], $row["humi"], $row["station"], $row["lastrun"], $row["duration"], $row["line"], $row["rain"], $row["temper"]);
 		     }
 		     mysqli_free_result($result);
 		     mysqli_close();
@@ -45,7 +46,7 @@
  <img border="0" alt="obrazek zpet na uvod" src="undo.png" width="200" height="200">
  </a>
 
-<p>&copy; <a href="https://pihrt.com">Pihrt.com</a> AUTOMAT OSPy. </p> 
+<p>&copy; <a href="https://www.pihrt.com">Pihrt.com</a> AUTOMAT OSPy. </p> 
 </body>
 </html>
 

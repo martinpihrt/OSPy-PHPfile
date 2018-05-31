@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Stav automatu</h1>
-<p id="cas"></p>
+<p id="cas">pátek 15.4.2016 11:56:25</p>
 <?
  function map($value, $fromLow, $fromHigh, $toLow, $toHigh) { // konverze rozsahu na jiny rozsah
     $fromRange = $fromHigh - $fromLow;
@@ -35,6 +35,7 @@
     $lastrun=$row['lastrun'];
     $station=$row['station'];
     $duration=$row['duration'];
+    $temper=$row['temper'];
     }
  else {
     $time= "Chyba SQL";
@@ -45,6 +46,7 @@
     $lastrun=" ";
     $station=" ";
     $duration=" ";
+    $temper=" ";
     }
  echo ("<b>Z&#225;znam ze dne:</b> $time");
 
@@ -106,6 +108,10 @@ if ($lastrun){
     if ($humi!=""){
       echo ("<b>vlhkost:</b> $humi [%RV]</p>");
       }
+    if ($temper!=""){
+      echo ("<b>teploty:</b> $temper [C]</p>");
+      }
+
     }
   }
 
@@ -138,7 +144,7 @@ window.setInterval("nactiCas()", 1000); //pravidelna zmena, sekunda
 <h2>Foto</h2>
 <p><a href="camfoto/foto.jpg" target="_blank"><img src="camfoto/foto.jpg" alt="snapshot" width="320" height="240"></a></p>
  
-<p>&copy; <a href="https://pihrt.com">Pihrt.com</a> AUTOMAT OSPy. </p> 
+<p>&copy; <a href="https://www.pihrt.com">Pihrt.com</a> AUTOMAT OSPy. </p> 
 <p>Pro plugin <a href="https://pihrt.com/elektronika/248-moje-rapsberry-pi-zavlazovani-zahrady">Remote Notifications</a> automatu <a href="https://github.com/martinpihrt/OSPy">OpenSprinkler</a> OSPy. </p> 
 </body>
 </html>
