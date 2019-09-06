@@ -18,4 +18,9 @@
               return $link;
 	}
 
+	function API(){
+		$api="zadejte";     // pristup k PHP souboru save.php
+		return $api;
+	}
+
 ?>
